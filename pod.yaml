@@ -1,0 +1,11 @@
+# pod.yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx-instance
+  labels:
+    env: dev
+spec:
+  containers:
+    - name: nginx-instance
+      image: nginx:latest
