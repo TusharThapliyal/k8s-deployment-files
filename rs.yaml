@@ -1,0 +1,24 @@
+# rs.yaml
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: webserver
+  labels:
+    env: dev
+spec:
+  template:
+    metadata:
+      name: nginx-instance
+      labels:
+        env: dev
+    spec:
+      containers:
+        - name: nginx-instance
+          image: nginx:latest
+  replicas: 3
+  selector:
+    matchLabels:
+      env: dev
+    
+# 1. If 3 pods with lable: dev are already running then this RS will not create any new pods BUT WE STILL NEED THE TEMPLATE section because in case one of the existing pods fails then this RS will use the template to create new ones.
+    
