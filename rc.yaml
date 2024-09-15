@@ -1,0 +1,20 @@
+# rc.yaml
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  name: webserver
+  labels:
+    env: dev
+spec:
+  template:
+    metadata:
+      name: nginx-instance
+      labels:
+        env: dev
+    spec:
+      containers:
+        - name: nginx-instance
+          image: nginx:latest
+  replicas: 3
+
+ # selector is available for RC but it is not mendatory to specify here as RC just assumes provided lables by default 
