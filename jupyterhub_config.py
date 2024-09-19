@@ -6,9 +6,9 @@ c = get_config()
 c.JupyterHub.ip = '0.0.0.0'
 c.JupyterHub.port = 8888
 
-c.KubeSpawner.cmd = ['jupyter-notebook']
-c.KubeSpawner.start_timeout = 600
-c.KubeSpawner.http_timeout = 600
+# c.KubeSpawner.cmd = ['jupyter-notebook']
+# c.KubeSpawner.start_timeout = 600
+# c.KubeSpawner.http_timeout = 600
 
 
 
@@ -20,5 +20,5 @@ c.KubeSpawner.http_timeout = 600
 c.JupyterHub.authenticator_class = 'jupyterhub.auth.PAMAuthenticator'
 
 # Define a simple list of users and passwords
-c.PAMAuthenticator.allowed_users = {'vipin', 'tushar', 'abhay'}
+c.PAMAuthenticator.allowed_users = {'vipin', 'tushar'}
 c.Authenticator.admin_users = {'tushar'}
