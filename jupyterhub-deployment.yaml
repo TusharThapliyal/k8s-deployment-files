@@ -28,9 +28,9 @@ spec:
               name: jupyterhub-port
           volumeMounts:
             - name: local-volume
-              mountPath: /home/  
+              mountPath: /home 
       volumes:
       - name: local-volume
         hostPath:
-          path: /home/              # The path on the host machine
+          path: /data/local              # The path on the host machine
           type: DirectoryOrCreate         # Creates the directory if it doesn't exist
