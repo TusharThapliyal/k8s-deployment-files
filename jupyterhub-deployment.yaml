@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: jupyterhub
+  labels:
+    apps: jupyterhub
+    version: v1
+    env: dev
+spec:
+  selector:
+    matchLabels:
+      apps: jupyterhub
+      version: v1
+      env: dev
+  template:
+    metadata:
+      name: jupyterhub
+      labels:
+        apps: jupyterhub
+        version: v1
+        env: dev
+    spec:
+      containers:
+        - name: jupyterhub-container
+          image: tusharthapliyal/jupyterhub:v1
+          ports:
+            - containerPort: 8888
+              name: jupyterhub-port
