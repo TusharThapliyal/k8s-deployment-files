@@ -1,5 +1,3 @@
-# Use the official JupyterHub base image
-#FROM jupyterhub/jupyterhub:latest
 FROM jupyter/base-notebook:latest
 
 # Install necessary packages
@@ -12,13 +10,8 @@ RUN apt-get update && \
 # Add a user for demonstration purposes
 RUN useradd -m -s /bin/bash vipin && \
     echo 'vipin:admin@123' | chpasswd && \
-#    echo 'jovyan:admin@123' | chpasswd && \
     useradd -m -s /bin/bash tushar && \
-    echo 'tushar:admin@123' | chpasswd && \
-    useradd -m -s /bin/bash abhay && \
-    echo 'abhay:admin@123' | chpasswd && \
-    useradd -m -s /bin/bash khushi && \
-    echo 'khushi:admin@123' | chpasswd
+    echo 'tushar:admin@123' | chpasswd
 
       
 # Add a configuration file for JupyterHub
