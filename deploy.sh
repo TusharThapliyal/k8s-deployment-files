@@ -5,4 +5,4 @@ sudo docker push tusharthapliyal/jupyterhub:latest
 
 sudo mkdir -p /data/local
 sudo chown -R $(id -u $USER):$(id -g $USER) /data/local   # Change ownership to the container's UID:GID
-sudo chmod -R 755 /data/local         # Ensure the container user has read/write access
+sudo chmod -R 777 /data/local         # Ensure the container user has read/write access

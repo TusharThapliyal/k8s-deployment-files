@@ -3,8 +3,8 @@ FROM jupyterhub/jupyterhub:latest
 
 # Install necessary packages
 USER root
-RUN apt-get update && \
-    apt-get install -y python3-pip && \
+RUN apt update && \
+    apt install python3-pip -y && \
     pip3 install --upgrade pip && \
     pip3 install notebook
 
