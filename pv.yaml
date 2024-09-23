@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: my-pvc
+  labels:
+      apps: jupyterhub
+      version: v1
+      env: dev
+spec:
+  storageClassName: hostpath
+  accessModes:
+    - ReadWriteOnce
+  capacity:
+    storage: 4Gi
+  hostPath:
+    path: "/data/local"
