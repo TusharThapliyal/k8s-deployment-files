@@ -22,3 +22,5 @@ Minimum system requirements:
 curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
 sudo install minikube-linux-amd64 /usr/local/bin/minikube && rm minikube-linux-amd64
 ```
+## Working 
+This setup allows username: <strong>tushar</strong> and <strong>vipin</strong> with password: <strong>admin@123</strong>. Once you login you will be in <strong>/home/{username}</strong> dir. All the files created by these users will be persisted at <strong>/data/local</strong> on you host machine independent of the lifecycle of Jupyterhub pod and deployment.
