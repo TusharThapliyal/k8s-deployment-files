@@ -4,13 +4,13 @@ metadata:
   name: jupyterhub-nodeport
   labels:
     apps: jupyterhub
-    version: v1
+    version: v2
     env: dev
 spec:
   type: NodePort
   selector:
     apps: jupyterhub
-    version: v1
+    version: v2
     env: dev
   ports:
     - protocol: TCP

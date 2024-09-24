@@ -4,33 +4,33 @@ metadata:
   name: jupyterhub
   labels:
     apps: jupyterhub
-    version: v1
+    version: v2
     env: dev
 spec:
   selector:
     matchLabels:
       apps: jupyterhub
-      version: v1
+      version: v2
       env: dev
   template:
     metadata:
       name: jupyterhub
       labels:
         apps: jupyterhub
-        version: v1
+        version: v2
         env: dev
     spec:
       containers:
         - name: jupyterhub-container
-          image: tusharthapliyal/jupyterhub:v1
+          image: tusharthapliyal/jupyterhub:v2
           ports:
-            - containerPort: 8888
+            - containerPort: 8000
               name: jupyterhub-port
           volumeMounts:
             - name: local-volume
               mountPath: /home 
       volumes:
-      - name: local-volume
-        hostPath:
-          path: /data/local              # The path on the host machine
-          type: DirectoryOrCreate         # Creates the directory if it doesn't exist
+        - name: local-volume
+          persistentVolumeClaim:
+            claimName: my-pvc  # Reference the PVC
+

@@ -32,7 +32,7 @@ c.JupyterHub.port = 8000
 c.JupyterHub.authenticator_class = 'jupyterhub.auth.PAMAuthenticator'
 
 # Define admin users (these users can manage the JupyterHub)
-c.Authenticator.admin_users = {'tushar'}
+c.Authenticator.admin_users = {'tushar'}  
 
 # (Optional) Restrict JupyterHub access to specific PAM users
 # If you want to allow only specific system users to access JupyterHub

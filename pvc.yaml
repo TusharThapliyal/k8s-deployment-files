@@ -3,9 +3,17 @@ kind: PersistentVolumeClaim
 metadata:
   name: my-pvc
 spec:
+<<<<<<< HEAD
   storageClassName: hostpath
+=======
+  #  storageClassName: hostpath
+>>>>>>> a619733 (+ pvc.yaml)
   accessModes:
     - ReadWriteOnce
   resources:
     requests:
+<<<<<<< HEAD
       storage: 1Gi
+=======
+      storage: 4Gi
+>>>>>>> a619733 (+ pvc.yaml)
