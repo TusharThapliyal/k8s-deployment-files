@@ -3,7 +3,8 @@
 Jupyterhub is an environment for multiple users to have shared access to a common Jupyter workspace.
 
 ## Architecture diagram
-<img width="1379" alt="Screenshot 2024-03-09 at 4 41 21 PM" src="https://github.com/TusharThapliyal/Terraform-jenkins/assets/75366942/1ba37f53-ad51-42ce-a469-c6fad62cc2dc">
+![Screenshot from 2024-09-24 17-18-59](https://github.com/user-attachments/assets/f489a532-8c10-4aa3-acd9-5285ffecd249)
+
 
 ## K8s cluster
 
